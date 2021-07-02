@@ -17,13 +17,13 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 
 env_list = dict()
 
-local_env = open(os.path).join(BASE_DIR, ',env')
+local_env = open(os.path.join(BASE_DIR, '.env'))
 
 while True:
     line = local_env.readline()
     if not line:
         break
-    line = line.replce('\n', '')
+    line = line.replace('\n', '')
     start = line.find('=')
     key = line[:start]
     value = line[start+1:]
