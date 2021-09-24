@@ -39,3 +39,4 @@ networks:
 volumes:
   gis_3ban_static:
   gis_3ban_media:
+  gis_mariadb:
