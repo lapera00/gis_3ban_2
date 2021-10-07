@@ -42,3 +42,6 @@ class LikeArticleView(RedirectView):
             return HttpResponseRedirect(reverse('articleapp:detail', kwargs={'pk': kwargs['article_pk']}))
 
         return super().get(request, *args, **kwargs)
+
+    def get_redirect_url(self, *args, **kwargs):
+        return reverse('articleapp:detail', kwargs={'pk': kwargs['article_pk']})
